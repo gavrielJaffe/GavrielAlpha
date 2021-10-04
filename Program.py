@@ -4,7 +4,6 @@ def notural(x):
         return x 
     else:
         return True
-
 def main (): 
     sum=1
     for i in range(101) : 
