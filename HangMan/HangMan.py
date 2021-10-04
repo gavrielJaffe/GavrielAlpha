@@ -1,10 +1,8 @@
 import random
 
 def fun():{
-
+    
 }
-
-
 def main():    
     GuessWords = ["alpha", "is", "great","team"]
     print ("words",GuessWords)
