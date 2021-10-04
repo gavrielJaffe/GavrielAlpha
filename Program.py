@@ -2,7 +2,6 @@ def main ():
     sum=1
     for i in range(101): 
         sum+=i
-        
         print ("all of number's : ",sum)
         if((i==5)or(i==6)or(i==7)or(i==8)):
             x =azert(i)
