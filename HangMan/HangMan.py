@@ -21,12 +21,6 @@ def main():
             print("can't be anything else than english abc letters")
             letter=input()
         print("Great it was between the abc letters ")
-
-
-
-
-
-
-
+        
 if(__name__=="__main__"):
     main()
