@@ -8,6 +8,7 @@ def main ():
             x =azert(i)
             print("the azert of the number is :  ",x,i)
 
+
 def azert(number):
     prodect=1
     for j in  range (number):
