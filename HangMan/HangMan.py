@@ -8,7 +8,7 @@ def main():
     GameWord=GuessWords[rnd]
     list_guess=["_"] * len(GameWord)
     #as long as the player have life or did not win the game.
-    while(( (counter!=0) or (GameWord=="".join(list_guess)))):
+    while(( (counter!=0) and (GameWord!="".join(list_guess)))):
         print("your information on the words currntly is: ",list_guess)
         letter=input("entear one of letter between a-z:").lower()
         #  while input invalid,asking for a good input
@@ -23,10 +23,10 @@ def main():
                 print("The current situation :",list_guess)
         else:
             counter=counter-1
-            print("Sorry you are incorrect")
     if(GuessWords=="".join(list_guess)):
         print("good,you got avery thing right")
-
+    elif(counter==0):
+        print("you did all of your guss")
 
 if (__name__=="__main__"):  
     main()
