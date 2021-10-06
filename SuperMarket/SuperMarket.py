@@ -1,11 +1,27 @@
+ import re
 
 def main():
-
    number=input("To add a product click 1,for Deleting a product click 2, to cart click 3 ")
    while((number!="3")):
         print("type is : ",type(number))
         #Add a product   
         if(number=="1"):
+            #get name of Product 
+            product=input("enter name of product: ")
+            #get price in 'int' only 
+            price=input("enter price of product: ") 
+            while not(price.isdigit()):
+                price=input("enter price of product: ") 
+            #get unit number 'int' only    
+            unit=input("enter unit number to purchase: ")
+            while not( unit.isdigit()):
+                unit=input("enter unit number to purchase: ")
+            
+
+            
+    #dic={"penter roductName":"price","unit" } 
+
+
             print("adding")
             break
         #delete a product     
