@@ -23,7 +23,6 @@ def main():
 
             if (product_name in all_products):
                 print("you have this product alredy  25\n")
-                
             new_product={"name" :product_name, "price_prodct":price,"unit_number":quantity}            
             add_prodact(all_products,new_product)
             if (product_name in new_product):
