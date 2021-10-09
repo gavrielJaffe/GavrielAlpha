@@ -2,7 +2,6 @@ def main():
    PriceInCart = 0
    all_products={}
    flag=4  
-   oldquantity =0
    while((flag!="3")):
         flag=input("To add a product click 1,Deleting a product click 2, to cart click 3:")   
         if(flag=="1"):
@@ -20,20 +19,16 @@ def main():
             print("new product: ",product_name) 
                     
             if (product_name in all_products):
-                print("going inside")
-                oldquantity +=int(quantity)
-                all_products[product_name]["unit_number"]=oldquantity
+                PriceInCart += int(quantity)*int( all_products[product_name]["price_prodct"] )
+    
+                all_products[product_name]["unit_number"]=int(all_products[product_name]["unit_number"]) +int(quantity)
                 print("quantity",quantity)
-                print("oldquantity",oldquantity)
-                PriceInCart = int(all_products[product_name]["unit_number"])*int( all_products[product_name]["price_prodct"] )
+                
                 print(all_products[product_name]["unit_number"])
                 print("all_products",all_products) 
-
-                
                 print("price in cart",PriceInCart)
             else:
                 all_products[product_name]={"price_prodct":price,"unit_number":quantity}
-                oldquantity=0
                 all_products[product_name] = {"price_prodct":price,"unit_number":quantity}
                 teamp_q = all_products[product_name]["unit_number"]
                 teamp_p = all_products[product_name]["price_prodct"]
@@ -55,7 +50,7 @@ def main():
                      print(all_products)
                 else:
                     all_products[prodact_remove]["unit_number"] = int(all_products[prodact_remove]["unit_number"])- prodact_quantity_remove
-                    PriceInCart=PriceInCart-(int(all_products[prodact_remove]["unit_number"])*int(all_products[prodact_remove]["price_prodct"]))
+                    PriceInCart=PriceInCart-(int(prodact_quantity_remove)*int(all_products[prodact_remove]["price_prodct"]))
                     print(all_products)
             else:
                  all_products[prodact_remove]["unit_number"] = int(all_products[prodact_remove]["unit_number"]) - prodact_quantity_remove
@@ -64,6 +59,7 @@ def main():
 
             print(PriceInCart)
         #end of shopping     
+            print(PriceInCart)
         elif(flag=="3"):
             break
         
