@@ -12,7 +12,7 @@ def main():
         if(user_action=="1"):
             new_costumer.add_product()
         elif(user_action=="2"):
-            new_costumer.remove_Product()
+            new_costumer.remove_product()
         elif(user_action=="3"):
             
             new_register.PrintSummary(new_costumer)

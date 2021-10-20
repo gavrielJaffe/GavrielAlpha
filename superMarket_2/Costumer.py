@@ -25,7 +25,7 @@ class Costumer:
             print("all_products",self.all_products)
         # gives us price in cart.  
         print("price in cart line 28",self.price_in_cart)
-    def remove_Product(self):
+    def remove_product(self):
         if(self.all_products=={}):
             print("no product in your cart")
         else:
