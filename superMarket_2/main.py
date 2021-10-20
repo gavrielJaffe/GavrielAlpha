@@ -3,11 +3,13 @@ from Register import Register
     
 all_costumers={}
 def main():
+    register_list_obj=[]
     end_of_shooping=2
     diffrent_register='9'
     while(end_of_shooping!='5'):
         if(diffrent_register =='9'):
             new_register=Register()
+            register_list_obj.append(new_register)
         user_action=4
         costumer_name=input("Hello,enter your name: \n")
         new_costumer=Costumer(costumer_name)
@@ -26,6 +28,17 @@ def main():
                 if (end_of_shooping!='5'):
                     diffrent_register=input("to go to a new Register prees 9,otherwis press any key.")
            # to get the biges dictionary with:  name ,product ,price,quantity.
-           # print("new_register.overall_sales_list: ",new_register.overall_sales_list)
+            print("new_register.overall_sales_list: ",new_register.overall_sales_list)
+            #print the dic in nice way.
+            for p_id, p_info in new_register.overall_sales_list.items():
+                print("\n Person name: ", p_id)
+                for key in p_info:
+                    print(key + ':', p_info[key])
+            #print the sum of register's
+            for i in register_list_obj:                
+                print("main 40",i.overall_sales_list)
+
+
+
 if(__name__=="__main__"):
    main()
