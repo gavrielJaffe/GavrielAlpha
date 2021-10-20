@@ -4,8 +4,10 @@ from Register import Register
 all_costumers={}
 def main():
     end_of_shooping=2
-    new_register=Register()
+    diffrent_register='9'
     while(end_of_shooping!='5'):
+        if(diffrent_register =='9'):
+            new_register=Register()
         user_action=4
         costumer_name=input("Hello,enter your name: \n")
         new_costumer=Costumer(costumer_name)
@@ -21,8 +23,8 @@ def main():
                 new_register.prints_summary(new_costumer)
                 print("done")
                 end_of_shooping=input("to End of shooping press 5,otherwis press any key.")
-
-
+                if (end_of_shooping!='5'):
+                    diffrent_register=input("to go to a new Register prees 9,otherwis press any key.")
            # to get the biges dictionary with:  name ,product ,price,quantity.
            # print("new_register.overall_sales_list: ",new_register.overall_sales_list)
 if(__name__=="__main__"):
