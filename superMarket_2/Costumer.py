@@ -5,6 +5,7 @@ class Costumer:
         self.Total_purchase_amount=0
                      
     def AddProduct(self):
+        #get product name,price,quantity. 
         product_name=input("enter name of product:")
         price=input("enter price of product: ") 
         while not(price.isdigit()):
@@ -17,9 +18,12 @@ class Costumer:
         if(product_name in self.all_products):
             self.all_products[product_name]["unit_number"]=self.all_products[product_name]["unit_number"]+ quantity
             print("all_products",self.all_products) 
+            
         else:
             self.all_products[product_name]={"price_product":price,"unit_number":quantity}
-            print("all_products",self.all_products)           
+            print("all_products",self.all_products)
+            #we need to go all over the 
+        self.Total_purchase_amount+=(price*quantity)            
     def RemoveProduct(self):
         prodact_remove = input("enter the product you want to remove?\n")
         product_quantity_remove = input("how many item you want to remove from it?\n")
