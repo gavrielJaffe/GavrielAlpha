@@ -8,6 +8,6 @@ class Register:
         self.overall_sales_list[costumer.costumer_name]=costumer.all_products
 
     def prints_summary(self,costumer):
-        print("line 11 Register:self.overall_sales_list: ",self.overall_sales_list)
+        print("(line 11)over all in this Register:\n ",self.overall_sales_list)
         print("self.profit_amount",self.profit_amount)
-        print("overall_sales_list:\n",self.overall_sales_list[costumer.costumer_name])
+        
