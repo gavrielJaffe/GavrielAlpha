@@ -23,9 +23,9 @@ class Costumer:
             self.all_products[product_name]={"price_product":price,"unit_number":quantity}
             self.price_in_cart+=self.all_products[product_name]["unit_number"]*self.all_products[product_name]["price_product"]
             print("all_products",self.all_products)
-            print("price is cart line 27 : ",self.price_in_cart)          
+        # gives us price in cart.  
         print("price in cart line 28",self.price_in_cart)
-    def RemoveProduct(self):
+    def remove_Product(self):
         if(self.all_products=={}):
             print("no product in your cart")
         else:
