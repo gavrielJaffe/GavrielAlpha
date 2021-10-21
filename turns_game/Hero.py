@@ -6,9 +6,9 @@ class Hero:
         self.level=level
         self.coins=coins
 
-    def Constructor():
+    def constructor_hero():
         print("")
-    def Heal():
+    def heal():
         print("")
     def level_up():
         print("")
