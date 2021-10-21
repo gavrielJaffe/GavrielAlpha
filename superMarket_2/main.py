@@ -1,5 +1,6 @@
 from Costumer import Costumer
 from Register import Register
+import json
     
 all_costumers={}
 def main():
@@ -36,9 +37,18 @@ def main():
                     print(key + ':', p_info[key])
             #print the sum of register's
             for i in register_list_obj:                
-                print("main 40",i.overall_sales_list)
+                print("main 39",i.overall_sales_list)
 
 
+            
+            with open(f"items/{costumer_name}.json","w") as my_json:
+                my_json.write(json.dumps(new_costumer.all_products))
+
+            print("print all product. main 41",new_costumer.all_products)
+
+
+
+            
 
 if(__name__=="__main__"):
    main()
