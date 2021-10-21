@@ -4,8 +4,3 @@ class Product:
         self.price=price
         self.quantity=quantity
         self.total_price =price*quantity
-
-        
-
-
-

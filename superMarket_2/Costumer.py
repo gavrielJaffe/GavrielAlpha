@@ -18,13 +18,13 @@ class Costumer:
         if (product_name in self.all_products):
             self.price_in_cart +=quantity*self.all_products[product_name]["price_product"]     
             self.all_products[product_name]["unit_number"]=self.all_products[product_name]["unit_number"]+ quantity
-            print("all_products line 21",self.all_products) 
+            print("all_products :",self.all_products) 
         else:
             self.all_products[product_name]={"price_product":price,"unit_number":quantity}
             self.price_in_cart+=self.all_products[product_name]["unit_number"]*self.all_products[product_name]["price_product"]
             print("all_products",self.all_products)
         # gives us price in cart.  
-        print("price in cart line 28",self.price_in_cart)
+        print("price in cart :",self.price_in_cart)
     def remove_product(self):
         if(self.all_products=={}):
             print("no product in your cart")
