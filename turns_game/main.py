@@ -1,7 +1,8 @@
 
 
 from Hero import Hero
-from Monster import Monster
+
+from monster import Monster
 
 
 
@@ -16,6 +17,16 @@ def main():
     while not((answer==1)or(answer==2)):
         answer=input("you can chocse to attack or to deffed,for attack press 1 ,to deffend press 2.\n")
         answer=int(answer)
+        if(answer==1):
+        #make some action on attacking.
+            obj_hero.attack_hero()
+        elif(answer==2):
+        #make some action on deffeding.
+            obj_monster.attack_hero()
+
+
+
+
     print("ok we gut till 16.")        
 
 
