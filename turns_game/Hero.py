@@ -14,14 +14,21 @@ class Hero:
         
     def level_up(level,damage,hp,coins):
         #we need to restart hp avery level for the Hero.
+        max_add_hp=10
+        max_hp=10
         if((coins*1.2) > level):
             m=0.3
             level=level+1
+            max_add_hp=(max_add_hp*m)+max_add_hp
+            if(max_hp<max_add_hp):
+                max_hp=max_add_hp 
             damage=(damage*m)+damage # (2 * 0.3)+2  -> 2.6
-            hp=(hp*m)+hp             # (10*0.3) +10 -> 13.3
-            #
-
-        print("")
+            hp=(hp*m)+hp             # (10*0.3) +10 -> 13.3 ->max_add_hp
+            hp=max_hp                         #   3.3 +max_add_hp
+                                    #    3.3 + 10 
+                                    #    13.3 < 15 -> go inside max 15.
+            #need to didact the number of coins from hero conins.
+            return level,damage,hp,
 
 
     def attack_hero():
