@@ -1,14 +1,12 @@
 global max_add_hp
 max_add_hp=10.0
 
-
 class Hero:
     def __init__(self,hp=10.0,level=1.0,coins=0.0,damage=2.0):
         self.hp= hp
         self.damage= damage
         self.level= level
-        self.coins= coins
-
+        self.coins= coins   
     def constructor_hero():
         print("")
     def heal(hp):
@@ -37,5 +35,9 @@ class Hero:
     def reduce_health():
         print("")
     def choose_action():
-        print("")
-    
+        answer=input("1:attack,2:lever up,3:heal ,4:defend")
+        answer=int(answer)
+        while(answer.isdigit)&((1<answer<5)):
+            answer=input("1:attack,2:lever up,3:heal ,4:defend")
+            answer=int(answer)
+        
