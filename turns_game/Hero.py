@@ -37,7 +37,7 @@ class Hero:
     def choose_action():
         answer=input("1:attack,2:lever up,3:heal ,4:defend")
         answer=int(answer)
-        while(answer.isdigit)&((1<answer<5)):
+        while not(answer.isdigit)&((1<=answer<=4)):
             answer=input("1:attack,2:lever up,3:heal ,4:defend")
             answer=int(answer)
         
