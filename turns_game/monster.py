@@ -16,12 +16,13 @@ class Monster:
         rnd=random(rnd (-1) ,rnd (+1))
         monster.monster_damage=monster.monster_level*(0.30)
         return monster.monster_damage
-        print("")
+        
     def attack_monster(hero,monster):
-        #need to reduce helth monster to the hero.or monster to hero.
-        monster.reduce_health_monster()
-        print("")
+        #need to reduce health monster to the hero.or monster to hero.
+        monster.reduce_health_monster(hero,monster)
+        
     def reduce_health_monster(hero,monster):
+        #reduce health to monster.
         monster.monster_hp = hero.damage - monster.hp
         if (monster.monster_hp<=0):
             monster.monster_hp=0

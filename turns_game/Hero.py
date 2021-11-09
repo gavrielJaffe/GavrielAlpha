@@ -30,10 +30,20 @@ class Hero:
         if(monster.moster_hp<=0):
             coins=hero.coins + hero.level
         return coins
-    def defend():
-        print("")
-    def reduce_health():
-        print("")
+    def defend(hero,monster):
+        # reduce_health but not as much like regular.
+        hero.hp= hero.hp-(monster.damage*0.2)
+        #10       10    - (10*0.2=>2)
+        print ("hero's hp after the attack is :",hero.hp)
+        
+    def reduce_health(monster,hero,answer):
+        #reduce health to the hero ,
+        if(answer==4):
+            return hero.defend()
+        hero.hp=monster.damage-hero.hp
+        #return hero's life back 
+        return print ("hero's hp after the attack is :",hero.hp)
+
     def choose_action(hero):
         answer=input("1:attack,2:lever up,3:heal ,4:defend")
         answer=int(answer)
