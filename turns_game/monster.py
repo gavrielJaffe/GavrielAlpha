@@ -16,8 +16,8 @@ class Monster:
         monster.monster_damage=monster.monster_level*(0.30)
         return monster.monster_damage
         
-    def attack_monster(hero,monster):
-        #need to reduce health monster to the hero.or monster to hero.
+    def attack(hero,monster):
+        #need to reduce health to the hero.
         monster.reduce_health_monster(hero,monster)
         
     def reduce_health_monster(hero,monster):
