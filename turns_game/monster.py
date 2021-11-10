@@ -1,5 +1,4 @@
 
-from _typeshed import Self
 import random
 from Hero import Hero 
 class Monster:
