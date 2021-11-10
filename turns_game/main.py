@@ -9,8 +9,13 @@ def main():
     obj_hero=Hero(10,10,1,1)
     obj_monster=Monster(5,5,1,"bogis")
     obj_hero.choose_action(obj_hero,obj_monster)
-    print(obj_hero,"obj hero")
+    if (obj_monster.monster_hp<0):
+        
 
+
+
+    print(obj_hero,"obj hero")
+    print ("hi from 13")
     if(__name__=="__main__"):
         main()
     # answer=input("hero's acton -1:attack,2:lever up,3:heal ,4:defend")
