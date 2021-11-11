@@ -42,10 +42,11 @@ class Hero:
         hero.hp=monster.damage-hero.hp
         #return hero's life back 
         return print ("hero's hp after the attack is :",hero.hp)
-    def choose_action(hero):
+    def choose_action(hero,moster):
         answer=input("1:attack,2:lever up,3:heal ,4:defend")
         answer=int(answer)
         while not(answer.isdigit)&((1<=answer<=4)):
             answer=input("1:attack,2:lever up,3:heal ,4:defend")
             answer=int(answer)
         hero.conins=hero.conins+1
+        return moster,hero 
