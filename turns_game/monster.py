@@ -1,12 +1,11 @@
-
 import random
-from Hero import Hero 
+
 class Monster:
-    def __init__(self):
-        self.monster_name= self.monster_name
-        self.monster_hp=self.monster_hp
-        self.monster_damage= self.monster_damage
-        self.monster_level=self.monster_level
+    def __init__(self,monster_name,monster_hp,monster_damage,monster_level):
+        self.monster_name=monster_name
+        self.monster_hp=monster_hp
+        self.monster_damage= monster_damage
+        self.monster_level=monster_level
 
     def constructor_monster(monster_name,hero,monster):
         # get level of monster.
@@ -19,7 +18,7 @@ class Monster:
     def attack(hero,monster):
         #need to reduce health to the hero.
         monster.reduce_health_monster(hero,monster)
-        
+       
     def reduce_health_monster(hero,monster):
         #reduce health to monster.
         monster.monster_hp = hero.damage - monster.hp

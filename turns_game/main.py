@@ -1,11 +1,11 @@
-from monster import Monster
-from Hero import Hero
-
 def main():
+    from Hero import Hero
+    from monster import Monster
+
     cunt_dead=0
     monster_reset=5
-
-    obj_hero=Hero()
+    print("hi")
+    obj_hero=Hero(10.0,1.0,0,2.0)
     obj_monster=Monster(monster_reset,monster_reset,monster_reset,"bogis")
     print(obj_hero,"obj hero")
     while( obj_hero.hp!= 0 ):
