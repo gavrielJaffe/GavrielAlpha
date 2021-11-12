@@ -1,5 +1,4 @@
 import random
-
 class Monster:
     def __init__(self,monster_name,monster_hp,monster_damage,monster_level):
         self.monster_name=monster_name

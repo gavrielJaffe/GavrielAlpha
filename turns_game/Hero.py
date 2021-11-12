@@ -1,5 +1,4 @@
 global max_add_hp
-from monster import *
 max_add_hp=10.0
 class Hero:
     def __init__(self,hp=10.0,level=1.0,coins=0.0,damage=2.0):

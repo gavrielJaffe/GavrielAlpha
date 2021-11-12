@@ -1,7 +1,6 @@
+from Hero import Hero
+from monster import Monster
 def main():
-    from Hero import Hero
-    from monster import Monster
-
     cunt_dead=0
     monster_reset=5
     print("hi")
@@ -19,5 +18,5 @@ def main():
         if(obj_hero.hp<=0):
             print("you lost in the game")
             break
-    if(__name__=="__main__"):
-        main()
+if(__name__=="__main__"):
+    main()
