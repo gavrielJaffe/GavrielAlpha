@@ -42,10 +42,14 @@ class Hero:
         #return hero's life back 
         return print ("hero's hp after the attack is :",hero.hp)
     def choose_action(hero,moster):
-        answer=input("1:attack,2:lever up,3:heal ,4:defend")
+        answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
         answer=int(answer)
-        while not(answer.isdigit)&((1<=answer<=4)):
-            answer=input("1:attack,2:lever up,3:heal ,4:defend")
+        while not(1<=answer<=4):
+            answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
             answer=int(answer)
-        hero.conins=hero.conins+1
+        hero.coins=hero.coins+1
+        print("hero.hp:",hero.hp)
+        print("hero.coins:",hero.coins)
+        print("hero.level:",hero.level)
+        print("hero.damage:",hero.damage)
         return moster,hero 
