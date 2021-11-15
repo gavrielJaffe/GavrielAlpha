@@ -1,3 +1,6 @@
+from monster import Monster
+
+
 global max_add_hp
 max_add_hp=10.0
 class Hero:
@@ -29,7 +32,7 @@ class Hero:
         if(monster.moster_hp<=0):
             coins=hero.coins + hero.level
         return coins
-    def defend(hero,monster):
+    def defend(monster,hero):
         # reduce_health but not as much like regular.
         hero.hp= hero.hp-(monster.damage*0.2)
         #10       10    - (10*0.2=>2)
@@ -43,10 +46,20 @@ class Hero:
         return print ("hero's hp after the attack is :",hero.hp)
     def choose_action(hero,moster):
         answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
- 
         while not('1'<=answer<='4'):
             answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
         hero.coins=hero.coins+1
+        #goes to right place,1:attack,2:lever up,3:heal ,4:defend 
+        if (answer==1):
+            hero.hero_attack(moster,hero)
+            #the hero_attack function is not good written.
+        elif(answer==2):
+            hero.level_up(hero.hp,hero.level,hero.coins,hero.damage)
+        elif(answer==3):
+            hero.heal(hero.hp)
+        elif(answer==4):
+            hero.defend(moster,hero)
+
         print("hero.hp:",hero.hp)
         print("hero.coins:",hero.coins)
         print("hero.level:",hero.level)
