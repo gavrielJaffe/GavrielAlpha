@@ -17,6 +17,7 @@ class Monster:
     def attack(hero,monster):
         #reduce health to the hero.
         print("got inside of attack in 20")
+        #need to get answer from choose.
         hero.reduce_health(monster,hero,answer)
         
        
