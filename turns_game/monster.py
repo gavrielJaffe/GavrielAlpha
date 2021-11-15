@@ -15,8 +15,10 @@ class Monster:
         return monster.monster_damage
         
     def attack(hero,monster):
-        #need to reduce health to the hero.
-        monster.reduce_health_monster(hero,monster)
+        #reduce health to the hero.
+        print("got inside of attack in 20")
+        hero.reduce_health(monster,hero,answer)
+        
        
     def reduce_health_monster(hero,monster):
         #reduce health to monster.

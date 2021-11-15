@@ -43,13 +43,15 @@ class Hero:
         return print ("hero's hp after the attack is :",hero.hp)
     def choose_action(hero,moster):
         answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
-        answer=int(answer)
-        while not(1<=answer<=4):
+ 
+        while not('1'<=answer<='4'):
             answer=input("1:attack,2:lever up,3:heal ,4:defend \n")
-            answer=int(answer)
         hero.coins=hero.coins+1
         print("hero.hp:",hero.hp)
         print("hero.coins:",hero.coins)
         print("hero.level:",hero.level)
         print("hero.damage:",hero.damage)
-        return moster,hero 
+        return moster,hero ,answer
+        #need to send to answer to the attack function in monster.
+
+

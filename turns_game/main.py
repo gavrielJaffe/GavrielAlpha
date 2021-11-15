@@ -7,6 +7,7 @@ def main():
     obj_hero=Hero(10.0,1.0,0,2.0)
     obj_monster=Monster(monster_reset,monster_reset,monster_reset,"bogis")
     print(obj_hero,"obj hero")
+    #as long the hero is alive the game in on.
     while( obj_hero.hp!= 0 ):
         obj_hero.choose_action(obj_monster)
         if (obj_monster.monster_hp<0):
@@ -15,8 +16,6 @@ def main():
             obj_monster=Monster(monster_reset+cunt_dead,monster_reset+cunt_dead,monster_reset+cunt_dead)
         #attack the hero.
         obj_monster.attack(obj_hero)
-        if(obj_hero.hp<=0):
-            print("you lost in the game")
-            break
+    print("you lost in the game")
 if(__name__=="__main__"):
     main()
