@@ -14,19 +14,19 @@ class Monster:
         monster.monster_damage=monster.monster_level*(0.30)
         return monster.monster_damage
         
-    def attack(hero,monster):
+    def attack(self,hero,monster):
         #reduce health to the hero.
         print("got inside of attack in 20")
         #need to get answer from choose.
-        hero.reduce_health(monster,hero,answer)
+        hero.reduce_health(self,answer)
         
        
-    def reduce_health_monster(hero,monster):
+    def reduce_health_monster(self,hero):
         #reduce health to monster.
-        monster.monster_hp = hero.damage - monster.hp
-        if (monster.monster_hp<=0):
-            monster.monster_hp=0
+        self.monster_hp = hero.damage - self.monster_hp
+        if (self.monster_hp<=0):
+            self.monster_hp=0
             #do we need to create a new monster hear ? 
-        return monster.monster_hp
+        return self.monster_hp
 
     
